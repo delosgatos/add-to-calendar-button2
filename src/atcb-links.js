@@ -54,6 +54,9 @@ function atcb_generate_links(host, type, data, subEvent = 'all', keyboardTrigger
         case 'google':
           atcb_generate_google(data.dates[`${subEvent}`]);
           break;
+        case 'yandex':
+          atcb_generate_yandex(data.dates[`${subEvent}`]);
+          break;
         case 'msteams':
           atcb_generate_msteams(data.dates[`${subEvent}`]);
           break;
@@ -126,6 +129,9 @@ function atcb_generate_subscribe_links(host, linkType, data, keyboardTrigger) {
     case 'google':
       atcb_subscribe_google(adjustedFileUrl);
       break;
+    case 'yandex':
+      atcb_subscribe_yandex(adjustedFileUrl);
+      break;
     case 'ms365':
       atcb_subscribe_microsoft(adjustedFileUrl, data.name);
       break;
@@ -194,6 +200,20 @@ function atcb_set_fully_successful(host, data, multiDateModal = false) {
 // ICAL
 function atcb_subscribe_ical(fileUrl) {
   atcb_open_cal_url(fileUrl);
+}
+
+// YANDEX
+function atcb_subscribe_yandex(fileUrl) {
+  const baseUrl = 'https://calendar.google.com/calendar/r?cid=';
+  // const baseUrl = 'https://calendar.yandex.ru/calendar/r?cid=';
+  const newFileUrl = (function () {
+    if (fileUrl.startsWith('https://calendar.google.com/') || fileUrl.startsWith('webcal://calendar.google.com/') || fileUrl.startsWith('http://calendar.google.com/') || fileUrl.startsWith('//calendar.google.com/')) {
+    // if (fileUrl.startsWith('https://calendar.yandex.ru/') || fileUrl.startsWith('webcal://calendar.yandex.ru/') || fileUrl.startsWith('http://calendar.yandex.ru/') || fileUrl.startsWith('//calendar.yandex.ru/')) {
+      return fileUrl.replace(/^(.)*\?cid=/, '');
+    }
+    return encodeURIComponent(fileUrl);
+  })();
+  atcb_open_cal_url(baseUrl + newFileUrl);
 }
 
 // GOOGLE
@@ -270,6 +290,38 @@ function atcb_generate_google(data) {
       return 'crm=BUSY&trp=true';
     })();
     urlParts.push(availabilityPart);
+  }
+  // We also push the UID. It has no real effect, but at least becomes part of the url that way
+  urlParts.push('uid=' + encodeURIComponent(data.uid));
+  atcb_open_cal_url(urlParts.join('&'));
+}
+
+// FUNCTION TO GENERATE THE YANDEX URL
+// https://calendar.yandex.ru/event?description=description-test&end=2023-02-23T16%3A01%3A00&location=qwe&locationHtml=qwe&name=test239502935&start=2023-02-23T15%3A29%3A00&uid=150490518
+// https://calendar.yandex.ru/event?action=TEMPLATE&description=description-test&end=20230403T233000&location=Moscow&locationHtml=Moscow&name=test239502935&start=20230403T101500
+function atcb_generate_yandex(data) {
+  const urlParts = [];
+  urlParts.push('https://calendar.yandex.ru/event?service=yandex');
+  // generate and add date
+  const formattedDate = atcb_generate_time(data, 'clean', 'google');
+  urlParts.push('start=' + encodeURIComponent(formattedDate.start));
+  urlParts.push('end=' + encodeURIComponent(formattedDate.end));
+  // add details (if set)
+  if (data.name != null && data.name != '') {
+    urlParts.push('name=' + encodeURIComponent(data.name));
+  }
+  if (data.location != null && data.location != '') {
+    urlParts.push('location=' + encodeURIComponent(data.location));
+  }
+  const tmpDataDescription = [];
+  if (data.description != null && data.description != '') {
+    tmpDataDescription.push(data.description);
+  }
+  if (tmpDataDescription.length > 0) {
+    urlParts.push('description=' + encodeURIComponent(tmpDataDescription.join()));
+  }
+  if (data.recurrence != null && data.recurrence != '') {
+    urlParts.push('recur=' + encodeURIComponent(data.recurrence));
   }
   // We also push the UID. It has no real effect, but at least becomes part of the url that way
   urlParts.push('uid=' + encodeURIComponent(data.uid));
@@ -403,8 +455,10 @@ function atcb_generate_ical(host, data, subEvent = 'all', keyboardTrigger = fals
   // otherwise, generate one on the fly
   const now = new Date();
   const ics_lines = ['BEGIN:VCALENDAR', 'VERSION:2.0'];
-  ics_lines.push('PRODID:-// https://add-to-calendar-pro.com // button v' + atcbVersion + ' //EN');
+  ics_lines.push('PRODID:-// ' + (data.prodid || 'ADD TO CALENDAR BUTTON 2') + ' // v' + atcbVersion + ' //RU');
   ics_lines.push('CALSCALE:GREGORIAN');
+  ics_lines.push('X-WR-CALNAME:'+data.calendarName);
+  ics_lines.push('X-WR-CALDESC:'+data.calendarDescription);
   // we set CANCEL, whenever the status says so
   // mind that in the multi-date case (where we create 1 ics file), it will always be PUBLISH
   if (subEvent == 'all') {
@@ -436,7 +490,7 @@ function atcb_generate_ical(host, data, subEvent = 'all', keyboardTrigger = fals
     return data.dates.length - 1;
   })();
   for (let i = loopStart; i <= loopEnd; i++) {
-    const formattedDate = atcb_generate_time(data.dates[`${i}`], 'clean', 'ical');
+    const formattedDate = atcb_generate_time(data.dates[`${i}`], 'clean', 'ical', false, data.convertToGMT);
     // get the timezone addon string for dates and include time zone information, if set and if not allday (not necessary in that case)
     const timeAddon = (function () {
       if (formattedDate.allday) {
@@ -502,6 +556,8 @@ function atcb_generate_ical(host, data, subEvent = 'all', keyboardTrigger = fals
     }
     // otherwise, we generate it from the array
     return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics_lines.join('\r\n'));
+    // For Android: https://stackoverflow.com/questions/11825221/add-calendar-event-to-android-from-web-vcs-download
+    // return 'data:text/x-vCalendar;charset=utf-8,' + encodeURIComponent(ics_lines.join('\r\n'));
   })();
   // in in-app browser cases (WebView), we offer a copy option, since the on-the-fly client side generation is usually not supported
   // for Android, we are more specific than with iOS and only go for specific apps at the moment
