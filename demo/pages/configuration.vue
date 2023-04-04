@@ -28,7 +28,7 @@ definePageMeta({
         <p class="mt-8 hidden lg:block">
           Mind that if you are using the <a href="https://github.com/add2cal/add-to-calendar-button-react" target="_blank" rel="noopener" class="whitespace-nowrap">React wrapper <ArrowTopRightOnSquareIcon class="-mt-0.5 mr-0.5 inline-block h-4 w-4" aria-hidden="true" /></a>, you do not necessarily
           need to stringify any non-string value.<br />
-          You could simply write something like <code>options=['Apple','Google']</code> instead of <code>options="['Apple','Google']"</code>.
+          You could simply write something like <code>options=['Apple','Yandex','Google']</code> instead of <code>options="['Apple','Yandex','Google']"</code>.
         </p>
       </div>
       <div v-else>
@@ -41,7 +41,7 @@ definePageMeta({
         <p class="mt-8 hidden lg:block">
           Falls du den <a href="https://github.com/add2cal/add-to-calendar-button-react" target="_blank" rel="noopener" class="whitespace-nowrap">React Wrapper <ArrowTopRightOnSquareIcon class="-mt-0.5 mr-0.5 inline-block h-4 w-4" aria-hidden="true" /></a> nutzt, musst du Nicht-String-Werte nicht
           zwingend zu Strings transformieren.<br />
-          In diesem Fall kannst du bspw. auch einfach <code>options=['Apple','Google']</code> anstelle von <code>options="['Apple','Google']"</code> schreiben.
+          In diesem Fall kannst du bspw. auch einfach <code>options=['Apple','Yandex','Google']</code> anstelle von <code>options="['Apple','Yandex','Google']"</code> schreiben.
         </p>
       </div>
 

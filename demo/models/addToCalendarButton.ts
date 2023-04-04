@@ -19,6 +19,7 @@ export enum Frequency {
 export enum Option {
   APPLE = 'Apple',
   GOOGLE = 'Google',
+  YANDEX = 'Yandex',
   ICAL = 'iCal',
   MICROSOFT365 = 'Microsoft365',
   MICROSOFT_TEAMS = 'MicrosoftTeams',

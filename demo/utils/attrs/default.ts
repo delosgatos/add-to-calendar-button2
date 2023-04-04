@@ -43,7 +43,7 @@ export const getDefaultDateAttrs = (defaultName: string, defaultDescription: str
 });
 
 export const getDefaultLayoutAttrs = (): LayoutAttrs => ({
-  [LayoutAttrsKey.OPTIONS]: [Option.APPLE, Option.GOOGLE, Option.ICAL, Option.OUTLOOK, Option.YAHOO],
+  [LayoutAttrsKey.OPTIONS]: [Option.APPLE, Option.YANDEX, Option.GOOGLE, Option.ICAL, Option.OUTLOOK, Option.YAHOO],
   [LayoutAttrsKey.LIST_STYLE]: DefaultListStyle,
   [LayoutAttrsKey.BUTTON_STYLE]: DefaultButtonStyle,
   [LayoutAttrsKey.TRIGGER]: DefaultTrigger,

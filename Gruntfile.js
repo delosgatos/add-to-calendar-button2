@@ -114,6 +114,16 @@ module.exports = function (grunt) {
           process: (content) => prepareFinalFile(content),
         },
       },
+      main: {
+        src: ['node_modules/timezones-ical-library/dist/tzlib.js', ...jsCoreFilesToCombine],
+        // uncomment the following line instead of the line after (and also at line 161) that to additionally create a atcb script, which is not minified
+        //dest: 'dist/atcb-unminified.js',
+        dest: '../roscongress-v3-css/_site/js/atcb.js',
+        options: {
+          stripBanners: true,
+          process: (content) => prepareFinalFile(content),
+        },
+      },
       module: {
         src: jsCoreFilesToCombine,
         dest: 'dist/module/index.js',
@@ -177,6 +187,7 @@ module.exports = function (grunt) {
       newBuild: {
         files: {
           'dist/atcb.js': ['dist/atcb.js'],
+          '../roscongress-v3-css/_site/js/atcb.js': ['../roscongress-v3-css/_site/js/atcb.js'],
         },
       },
     },

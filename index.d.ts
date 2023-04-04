@@ -45,7 +45,7 @@ declare module 'add-to-calendar-button' {
       updated?: string;
       identifier?: string;
       subscribe?: boolean;
-      options?: ('Apple' | 'Google' | 'iCal' | 'Microsoft365' | 'MicrosoftTeams' | 'Outlook.com' | 'Yahoo')[];
+      options?: ('Apple' | 'Yandex' | 'Google' | 'iCal' | 'Microsoft365' | 'MicrosoftTeams' | 'Outlook.com' | 'Yahoo')[];
       iCalFileName?: string;
       listStyle?: 'dropdown' | 'dropdown-static' | 'overlay' | 'modal';
       buttonStyle?: 'default' | '3d' | 'flat' | 'round' | 'neumorphism' | 'text' | 'date' | 'custom' | 'none';

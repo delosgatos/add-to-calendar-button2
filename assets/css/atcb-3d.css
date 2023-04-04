@@ -885,6 +885,7 @@ a.atcb-modal-btn:focus-visible{
 }
 
 .atcb-icon .atcb-icon-google svg,
+.atcb-icon .atcb-icon-yandex svg,
 .atcb-icon .atcb-icon-msteams svg,
 .atcb-icon .atcb-icon-outlookcom svg {
   filter: var(--icon-filter);

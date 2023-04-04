@@ -128,7 +128,7 @@ onUnmounted(() => {
             <add-to-calendar-button
               :name="$t('demo_data.name')"
               :startDate="defaultDate"
-              options="'Apple','Google','iCal'"
+              options="'Apple','Yandex','Google','iCal'"
               listStyle="overlay"
               buttonStyle="round"
               hideIconButton
@@ -144,7 +144,7 @@ onUnmounted(() => {
 &lt;add-to-calendar-button
   name="{{ $t('demo_data.name') }}"
   startDate="{{ defaultDate }}"
-  options="'Apple','Google','iCal'"
+  options="'Apple','Yandex','Google','iCal'"
   buttonStyle="round"
   hideIconButton
   hideBackground
@@ -158,7 +158,7 @@ onUnmounted(() => {
         </div>
         <div class="block w-full justify-between pt-4 md:flex">
           <div class="flex w-full flex-none justify-center p-6 pt-8 md:w-[300px]">
-            <add-to-calendar-button :name="$t('demo_data.name')" :startDate="defaultDate" options="'Apple','Google','iCal'" buttonStyle="flat" hideIconList buttonsList hideBackground size="5" :label="$t('demo_data.name_custom_3')" lightMode="bodyScheme" :language="locale"></add-to-calendar-button>
+            <add-to-calendar-button :name="$t('demo_data.name')" :startDate="defaultDate" options="'Apple','Yandex','Google','iCal'" buttonStyle="flat" hideIconList buttonsList hideBackground size="5" :label="$t('demo_data.name_custom_3')" lightMode="bodyScheme" :language="locale"></add-to-calendar-button>
           </div>
           <div class="flex-1 overflow-x-auto">
             <LazyCodeBlock class="line-numbers">
@@ -166,7 +166,7 @@ onUnmounted(() => {
 &lt;add-to-calendar-button
   name="{{ $t('demo_data.name') }}"
   startDate="{{ defaultDate }}"
-  options="'Apple','Google','iCal'"
+  options="'Apple','Yandex','Google','iCal'"
   buttonStyle="flat"
   hideIconList
   buttonsList
@@ -185,7 +185,7 @@ onUnmounted(() => {
             <add-to-calendar-button
               :name="$t('demo_data.name_custom_4')"
               :startDate="defaultDate"
-              options="'Apple','Google','iCal'"
+              options="'Apple','Yandex','Google','iCal'"
               startTime="10:10"
               endTime="10:40"
               :timeZone="$t('demo_data.default_timezone')"
@@ -202,7 +202,7 @@ onUnmounted(() => {
 &lt;add-to-calendar-button
   name="{{ $t('demo_data.name_custom_4') }}"
   startDate="{{ defaultDate }}"
-  options="'Apple','Google','iCal'"
+  options="'Apple','Yandex','Google','iCal'"
   startTime="10:10"
   endTime="10:40"
   timeZone="{{ $t('demo_data.default_timezone') }}"
@@ -247,7 +247,7 @@ onUnmounted(() => {
         </div>
         <div class="block w-full justify-between pt-4 md:flex">
           <div class="flex w-full flex-none justify-center p-6 pt-8 md:w-[300px]">
-            <add-to-calendar-button styleLight="--btn-background: #ffa255;" styleDark="--btn-background: #000;" :name="$t('demo_data.name')" :startDate="defaultDate" options="'Apple','Google','iCal'" lightMode="bodyScheme" :language="locale"></add-to-calendar-button>
+            <add-to-calendar-button styleLight="--btn-background: #ffa255;" styleDark="--btn-background: #000;" :name="$t('demo_data.name')" :startDate="defaultDate" options="'Apple','Yandex','Google','iCal'" lightMode="bodyScheme" :language="locale"></add-to-calendar-button>
           </div>
           <div class="flex-1 overflow-x-auto">
             <LazyCodeBlock class="line-numbers">
@@ -257,7 +257,7 @@ onUnmounted(() => {
   styleDark="--btn-background: #000;"
   name="{{ $t('demo_data.name') }}"
   startDate="{{ defaultDate }}"
-  options="'Apple','Google','iCal'"
+  options="'Apple','Yandex','Google','iCal'"
   lightMode="bodyScheme"{{ defaultLang }}
 &gt;&lt;/add-to-calendar-button&gt;
 </pre
@@ -303,7 +303,7 @@ onUnmounted(() => {
 &lt;add-to-calendar-button
   name="{{ $t('demo_data.name') }}"
   startDate="{{ defaultDate }}"
-  options="'Apple','Google','iCal'"
+  options="'Apple','Yandex','Google','iCal'"
   lightMode="bodyScheme"{{ defaultLang }}
   customCss="https://add-to-calendar-button.com/atcb.css"
   buttonStyle="custom"
@@ -378,7 +378,7 @@ onUnmounted(() => {
               startTime="10:15"
               endTime="23:30"
               :timeZone="$t('demo_data.default_timezone')"
-              options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
               lightMode="bodyScheme"
               :description="$t('demo_data.description_alt2')"
               :language="locale"
@@ -393,7 +393,7 @@ onUnmounted(() => {
   startTime="10:15"
   endTime="23:30"
   timeZone="{{ $t('demo_data.default_timezone') }}"
-  options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
   lightMode="bodyScheme"
   description="{{ $t('demo_data.description_alt2') }}"{{ defaultLang }}
 &gt;&lt;/add-to-calendar-button&gt;
@@ -430,7 +430,7 @@ onUnmounted(() => {
               :startDate="defaultDate"
               subscribe
               icsFile="https://add2cal.github.io/ics-demo/demo-calendar.ics"
-              options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
               lightMode="bodyScheme"
               :language="locale"
             ></add-to-calendar-button>
@@ -443,7 +443,7 @@ onUnmounted(() => {
   startDate="{{ defaultDate }}"
   subscribe
   icsFile="https://add2cal.github.io/ics-demo/demo-calendar.ics"
-  options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
   lightMode="bodyScheme"{{ defaultLang }}
 &gt;&lt;/add-to-calendar-button&gt;
 </pre

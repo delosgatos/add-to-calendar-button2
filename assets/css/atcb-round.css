@@ -281,8 +281,8 @@
  */
 
 .atcb-icon {
-  height: 1em;
-  margin-bottom: 0.3em;
+  height: 1.4em;
+  margin-bottom: 0.1em;
   margin-right: 0.8em;
   flex-grow: 0;
   flex-shrink: 0;
@@ -444,8 +444,8 @@
 }
 
 .atcb-list-item .atcb-icon {
-  margin-bottom: 0.5em;
-  margin-right: 0.6em;
+  margin-bottom: 0.2em;
+  margin-right: 1em;
   width: 1.125em;
 }
 
@@ -898,7 +898,12 @@ a.atcb-modal-btn:focus-visible {
 }
 
 .atcb-icon .atcb-icon-google svg,
+.atcb-icon .atcb-icon-yandex svg,
 .atcb-icon .atcb-icon-msteams svg,
 .atcb-icon .atcb-icon-outlookcom svg {
   filter: var(--icon-filter);
+}
+.atcb-icon .atcb-icon-yandex {
+  display: inline-block;
+  width: 1.5em;
 }

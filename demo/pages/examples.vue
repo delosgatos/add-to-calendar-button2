@@ -107,7 +107,7 @@ watch(locale, value => {
               :timeZone="$t('demo_data.default_timezone')"
               :location="$t('demo_data.location')"
               :description="$t('demo_data.description_alt1')"
-              options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
               lightMode="bodyScheme"
               :language="locale"
             ></add-to-calendar-button>
@@ -123,7 +123,7 @@ watch(locale, value => {
   timeZone="{{ $t('demo_data.default_timezone') }}"
   location="{{ $t('demo_data.location') }}"
   description="{{ $t('demo_data.description_alt1') }}"
-  options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
   lightMode="bodyScheme"{{ defaultLang }}
 &gt;&lt;/add-to-calendar-button&gt;
 </pre
@@ -150,7 +150,7 @@ watch(locale, value => {
               :startDate="defaultDate"
               :location="$t('demo_data.location')"
               :description="$t('demo_data.description_alt1')"
-              options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
               lightMode="bodyScheme"
               :language="locale"
             ></add-to-calendar-button>
@@ -163,7 +163,7 @@ watch(locale, value => {
   startDate="{{ defaultDate }}"
   location="{{ $t('demo_data.location') }}"
   description="{{ $t('demo_data.description_alt1') }}"
-  options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
   lightMode="bodyScheme"{{ defaultLang }}
 &gt;&lt;/add-to-calendar-button&gt;
 </pre
@@ -195,7 +195,7 @@ watch(locale, value => {
               :timeZone="$t('demo_data.default_timezone')"
               :location="$t('demo_data.url')"
               :description="$t('demo_data.description_alt1')"
-              options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
               lightMode="bodyScheme"
               :language="locale"
             ></add-to-calendar-button>
@@ -211,7 +211,7 @@ watch(locale, value => {
   timeZone="{{ $t('demo_data.default_timezone') }}"
   location="{{ $t('demo_data.url') }}"
   description="{{ $t('demo_data.description_alt1') }}"
-  options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
   lightMode="bodyScheme"{{ defaultLang }}
 &gt;&lt;/add-to-calendar-button&gt;
 </pre
@@ -242,7 +242,7 @@ watch(locale, value => {
               :timeZone="$t('demo_data.default_timezone')"
               :location="$t('demo_data.location')"
               :description="$t('demo_data.description_alt1')"
-              options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
               recurrence="RRULE:FREQ=WEEKLY;INTERVAL=1;WKST=MO;BYDAY=WE,FR;COUNT=6"
               lightMode="bodyScheme"
               :language="locale"
@@ -259,7 +259,7 @@ watch(locale, value => {
   timeZone="{{ $t('demo_data.default_timezone') }}"
   location="{{ $t('demo_data.location') }}"
   description="{{ $t('demo_data.description_alt1') }}"
-  options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
   recurrence="RRULE:FREQ=WEEKLY;INTERVAL=1;WKST=MO;BYDAY=WE,FR;COUNT=6"
   lightMode="bodyScheme"{{ defaultLang }}
 &gt;&lt;/add-to-calendar-button&gt;
@@ -286,7 +286,7 @@ watch(locale, value => {
               :timeZone="$t('demo_data.default_timezone')"
               :location="$t('demo_data.location')"
               :description="$t('demo_data.description_alt1')"
-              options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
               recurrence="weekly"
               recurrence_interval="1"
               recurrence_count="6"
@@ -306,7 +306,7 @@ watch(locale, value => {
   timeZone="{{ $t('demo_data.default_timezone') }}"
   location="{{ $t('demo_data.location') }}"
   description="{{ $t('demo_data.description_alt1') }}"
-  options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
   recurrence="weekly"
   recurrence_interval="1"
   recurrence_count="6"
@@ -353,7 +353,7 @@ watch(locale, value => {
               :dates="defaultMultiDate"
               :timeZone="$t('demo_data.default_timezone')"
               :location="$t('demo_data.location')"
-              options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
               lightMode="bodyScheme"
               :language="locale"
             ></add-to-calendar-button>
@@ -388,7 +388,7 @@ watch(locale, value => {
   ]'
   timeZone="{{ $t('demo_data.default_timezone') }}"
   location="{{ $t('demo_data.location') }}"
-  options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
   lightMode="bodyScheme"{{ defaultLang }}
 &gt;&lt;/add-to-calendar-button&gt;
 </pre
@@ -490,7 +490,7 @@ watch(locale, value => {
               :location="$t('demo_data.location')"
               :label="$t('demo_data.name_custom_2')"
               :description="$t('demo_data.description_alt1')"
-              options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
               listStyle="modal"
               inline
               lightMode="bodyScheme"
@@ -508,7 +508,7 @@ watch(locale, value => {
   timeZone="{{ $t('demo_data.default_timezone') }}"
   location="{{ $t('demo_data.location') }}"
   description="{{ $t('demo_data.description_alt1') }}"
-  options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+  options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
   label="{{ $t('demo_data.name_custom_2') }}"
   inline
   listStyle="modal"
@@ -582,7 +582,7 @@ watch(locale, value => {
               endTime="23:30"
               :timeZone="$t('demo_data.default_timezone')"
               :description="$t('demo_data.description_alt1')"
-              options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+              options="'Apple','Yandex','Google','iCal','Outlook.com','Yahoo'"
               buttonsList
               hideTextLabelButton
               buttonStyle="round"
@@ -600,7 +600,7 @@ watch(locale, value => {
   endTime="23:30"
   timeZone="{{ $t('demo_data.default_timezone') }}"
   description="{{ $t('demo_data.description_alt1') }}"
-  options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+  options="'Apple','Google','Yandex','iCal','Outlook.com','Yahoo'"
   buttonsList
   hideTextLabelButton
   buttonStyle="round"

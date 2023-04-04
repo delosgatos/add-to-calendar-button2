@@ -363,8 +363,8 @@
 }
 
 .atcb-list-item .atcb-icon {
-  margin-bottom: .5em;
-  margin-right: .6em;
+  margin-bottom: .1em;
+  margin-right: 1em;
   width: 1.125em;
 }
 
@@ -817,6 +817,7 @@ a.atcb-modal-btn:focus-visible{
 }
 
 .atcb-icon .atcb-icon-google svg,
+.atcb-icon .atcb-icon-yandex svg,
 .atcb-icon .atcb-icon-msteams svg,
 .atcb-icon .atcb-icon-outlookcom svg {
   filter: var(--icon-filter);

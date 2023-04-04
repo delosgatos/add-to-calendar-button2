@@ -36,7 +36,7 @@ const defaultDate = nextDay.getFullYear() + '-' + ('0' + (nextDay.getMonth() + 1
     <h3 class="mb-3 mt-6">B. Deep Integration</h3>
     <p>
       Another convenient way to save events to a calendar is by <span class="font-semibold">integrating</span> a third-party calendar application to the respective tool or website.<br />
-      Popular calendar applications such as Apple Calendar, Google Calendar, and Outlook Calendar can be integrated to automatically save events.<br />
+      Popular calendar applications such as Apple Calendar, Yandex Calendar, Google Calendar, and Outlook Calendar can be integrated to automatically save events.<br />
       While this is extremely stable, it requires way more setup than a simple add to calendar button. In addition, it can have highly negative effects on the user experience (UX), when the user is required to allow another tool access to such sensitive information like the personal calendar.<br />
       As long as your application is not already connected to such or similar information out of other reasons, it is usually not recommendable to add any functionality promting the user to confirm the connection to his personal information.<br />
       Besides the UX issue, you might even not want this as the owner of the application, website, or tool, since such a process would come with a lot of privacy issues (GDPR, CCPA, and LGPD calling).
@@ -61,7 +61,7 @@ const defaultDate = nextDay.getFullYear() + '-' + ('0' + (nextDay.getMonth() + 1
 
     <p>
       First, the technical component of integrating an Add to Calendar button requires some programming knowledge.<br />
-      The ability to embed code into the website and to link to third-party calendar systems will be needed. You'll need to choose from a variety of calendar systems, such as Google Calendar, Apple Calendar, Outlook, and Yahoo Calendar.<br />
+      The ability to embed code into the website and to link to third-party calendar systems will be needed. You'll need to choose from a variety of calendar systems, such as Google Calendar, Yandex Calendar, Apple Calendar, Outlook, and Yahoo Calendar.<br />
       Depending on the computer language used to create the website, different coding techniques could be used. Once the code is added to the website, testing and debugging will need to take place to ensure the button works as expected.
     </p>
 
@@ -121,7 +121,7 @@ const defaultDate = nextDay.getFullYear() + '-' + ('0' + (nextDay.getMonth() + 1
         timeZone="currentBrowser"
         :location="$t('demo_data.url')"
         :description="$t('demo_data.description')"
-        options="'Apple','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
+        options="'Apple','Yandex','Google','iCal','Outlook.com','Microsoft 365','Microsoft Teams','Yahoo'"
         lightMode="bodyScheme"
         buttonStyle="round"
         size="8"

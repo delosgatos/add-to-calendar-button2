@@ -30,9 +30,9 @@ const rtlLanguages = ['ar'];
 // the database object
 const i18nStrings = {
   en: {
-    'label.addtocalendar': 'Add to Calendar',
-    'label.icalfile': 'iCal File',
-    close: 'Close',
+    'label.addtocalendar': 'Добавить в календарь',
+    'label.icalfile': 'iCal файл',
+    close: 'Закрыть',
     'modal.button.default': 'Click me',
     'modal.webview.ical.h': 'Open your browser',
     'modal.webview.ical.text': 'Unfortunately, in-app browsers have problems with the way we generate the calendar file.',

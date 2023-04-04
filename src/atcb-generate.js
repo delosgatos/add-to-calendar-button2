@@ -62,6 +62,7 @@ function atcb_generate_label(host, data, parent, type, icon = false, text = '', 
       }
       break;
     case 'apple':
+    case 'yandex':
     case 'google':
     case 'ical':
     case 'msteams':
@@ -133,6 +134,7 @@ function atcb_generate_label_content(data, parent, type, icon, text, oneOption) 
   const labelText = {
     trigger: text || defaultTriggerText,
     apple: text || 'Apple',
+    yandex: text || 'Яндекс',
     google: text || 'Google',
     ical: text || atcb_translate_hook('label.icalfile', data),
     msteams: text || 'Microsoft Teams',

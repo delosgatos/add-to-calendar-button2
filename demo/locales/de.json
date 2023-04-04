@@ -143,7 +143,7 @@
     "title": "{title} {'|'} Free Add to Calendar Button",
     "title_main": "Add to Calendar Button",
     "title_slug": "Termine teilen leicht gemacht",
-    "keywords": "Kalender, Event, Veranstaltung, teilen, Button, Script, Skript, Widget, RSVP, Javascript, Angular, React, Vue, Svelte, Astro, Web Component, Outlook, iCal, Microsoft, Teams, Apple, Google, Yahoo, free, kostenlos",
+    "keywords": "Kalender, Event, Veranstaltung, teilen, Button, Script, Skript, Widget, RSVP, Javascript, Angular, React, Vue, Svelte, Astro, Web Component, Outlook, iCal, Microsoft, Teams, Apple, Yandex, Google, Yahoo, free, kostenlos",
     "description": "Interaktive Demo sowie Tutorials für die Integration in alle großen Web-Frameworks. Speichere unkompliziert Events im Kalender deiner Nutzer.",
     "seo-title": "Alles über Add to Calendar Buttons",
     "404": {
@@ -475,7 +475,7 @@
     "description_sub_3": "Dies ist der dritte Teil des Reminders den Add to Calendar Button unter [url]https://add-to-calendar-button.com/de/[/url] zu testen",
     "default_timezone": "Europe/Berlin",
     "location": "World Wide Web",
-    "options_labels": "'Apple{'|'}Apple ist in Ordnung','Google{'|'}Zum Google-Kalendar','iCal{'|'}iCall ftw!','Outlook.com{'|'}Lieber Outlook...','Yahoo{'|'}Yahoo, wirklich?'",
+    "options_labels": "'Apple{'|'}Apple ist in Ordnung','Yandex{'|'}Zum Yandex-Kalendar','Google{'|'}Zum Google-Kalendar','iCal{'|'}iCall ftw!','Outlook.com{'|'}Lieber Outlook...','Yahoo{'|'}Yahoo, wirklich?'",
     "options_label_single_dummy": "Mein eigenes Label",
     "cust_close_label": "Liste schließen",
     "label_add": "Event hinzufügen",
